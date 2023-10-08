@@ -1,0 +1,27 @@
+.l-homepage {
+  padding: 24px;
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__titles {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  &__link {
+    text-transform: uppercase !important;
+    font-size: 16px;
+    margin-left: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    &:hover {
+      line-height: 16px;
+      color: #C75C00;
+    }
+  }
+}

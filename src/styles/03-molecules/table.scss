@@ -1,0 +1,36 @@
+.m-table {
+  width: 100%;
+  border-collapse: collapse;
+  & > thead > tr > th {
+    text-align: left;
+    padding-bottom: 16px;
+  }
+  & >tbody > tr {
+    border-top: 1px solid black;
+
+    & > td {
+      padding: 16px 0;
+    }
+
+    & > td:first-child {
+      min-width: 40px;
+    }
+  }
+
+  &__a-button {
+    background: none;
+    border: none;
+    &:hover {
+      cursor: pointer;
+    }
+    &--delete:hover {
+      filter: brightness(0) saturate(100%) invert(12%) sepia(99%) saturate(5566%) hue-rotate(337deg) brightness(77%) contrast(104%);
+    }
+
+    &--edit:hover {
+      filter: brightness(0) saturate(100%) invert(12%) sepia(95%) saturate(4674%) hue-rotate(225deg) brightness(87%) contrast(104%);    }
+  }
+  &__a-icon {
+    width: 16px;
+  }
+}
