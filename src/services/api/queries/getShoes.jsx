@@ -12,6 +12,18 @@ const SHOES_QUERY = gql`
             datePurchase
             size {name}
             key
+            model {
+                key
+                name
+            }
+            brand {
+                key
+                name
+            }
+            color {
+                key
+                name
+            }
         }
     }
 `;

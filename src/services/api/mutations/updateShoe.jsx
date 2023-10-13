@@ -1,16 +1,27 @@
 import gql from "graphql-tag";
 
 const SHOES_EDIT = gql`
-    mutation {
-        editShoe (
+    mutation UpdateShoe(
+        $key: ID!
+        $pricePurchase: Float!
+        $priceSold: Float!
+        $datePurchase: String!
+        $dateSold: String!
+        $code: String!
+        $sizeKey: ID!
+        $locationPurchaseKey: ID!
+        $locationSoldKey: ID!
+    ) {
+        updateShoe (
+            key: $key
             pricePurchase: $pricePurchase
             priceSold: $priceSold
             datePurchase: $datePurchase
             dateSold: $dateSold
-            locationPurchaseKey: $locationPurchaseKey
-            locationSoldKey: $locationSoldKey
-            sizeKey: $sizeKey
             code: $code
+            size_key: $sizeKey
+            locationPurchase_key: $locationPurchaseKey
+            locationSold_key: $locationSoldKey
         ) {
             locationSold {name}
             locationPurchase {name}

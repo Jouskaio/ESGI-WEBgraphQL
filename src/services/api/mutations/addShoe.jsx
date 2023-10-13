@@ -10,8 +10,9 @@ const SHOES_ADD = gql`
         $sizeKey: ID!
         $locationPurchaseKey: ID!
         $locationSoldKey: ID!
-        $modelKey: ID!,
-        $brandKey: ID!,
+        $brandKey: ID!
+        $modelKey: ID!
+
     ) {
         addShoe(
             pricePurchase: $pricePurchase
@@ -22,8 +23,9 @@ const SHOES_ADD = gql`
             size_key: $sizeKey
             locationPurchase_key: $locationPurchaseKey
             locationSold_key: $locationSoldKey
-            model_key: $modelKey,
-            brand_key: $brandKey,
+            brand_key: $brandKey
+            model_key: $modelKey
+            color_key: 1
         ) {
             key
             pricePurchase
@@ -38,12 +40,6 @@ const SHOES_ADD = gql`
                 name
             }
             locationSold {
-                name
-            }
-            brand {
-                name
-            }
-            model {
                 name
             }
         }
