@@ -1,26 +1,58 @@
 .m-form {
     width: 100%;
-    & > label {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    & > nav {
+        width: calc(50% - 16px);
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        margin-bottom: 8px;
-    }
-    & > label > input {
-        width: 30%;
-        padding: 8px;
-        border: 1px solid black;
-        border-radius: 4px;
-        margin-bottom: 16px;
-        margin-top: 8px;
-    }
-    & > button {
-        padding: 8px;
-        border: 1px solid black;
-        border-radius: 4px;
-        background: none;
-        &:hover {
-        cursor: pointer;
+        &:first-child {
+            margin-right: 8px;
         }
+        &:last-child {
+            margin-left: 8px;
+        }
+        & > label {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            margin-bottom: 8px;
+        }
+        & > label > input {
+            width: calc(100% - 16px);
+            padding: 8px;
+            border: 1px solid black;
+            border-radius: 4px;
+            margin-bottom: 16px;
+            margin-top: 8px;
+        }
+        & > button {
+            padding: 8px;
+            border: 1px solid black;
+            border-radius: 4px;
+            background: none;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__a-submit {
+        display: block;
+        margin-left: calc(50% - 8px);
+        width: calc(50% - 16px);
+        padding: 8px;
+        margin-top: 30px;
+
+    }
+
+    &__a-select {
+        margin-top: 8px;
+        width: 100%;
+        padding: 8px;
+        border: 1px solid black;
+        border-radius: 4px;
     }
 }

@@ -1,6 +1,11 @@
 .m-table {
   width: 100%;
   border-collapse: collapse;
+
+  &--brands {
+    width: 50%;
+    margin: 0 auto;
+  }
   & > thead > tr > th {
     text-align: left;
     padding-bottom: 16px;

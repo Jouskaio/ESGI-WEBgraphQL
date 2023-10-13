@@ -6,36 +6,46 @@ const SHOES_ADD = gql`
         $priceSold: Float!
         $datePurchase: String!
         $dateSold: String!
-        $locationPurchaseKey: String!
-        $locationSoldKey: String!
-        $sizeKey: String!
         $code: String!
+        $sizeKey: ID!
+        $locationPurchaseKey: ID!
+        $locationSoldKey: ID!
+        $modelKey: ID!,
+        $brandKey: ID!,
     ) {
         addShoe(
             pricePurchase: $pricePurchase
             priceSold: $priceSold
             datePurchase: $datePurchase
             dateSold: $dateSold
-            locationPurchaseKey: $locationPurchaseKey
-            locationSoldKey: $locationSoldKey
-            sizeKey: $sizeKey
             code: $code
+            size_key: $sizeKey
+            locationPurchase_key: $locationPurchaseKey
+            locationSold_key: $locationSoldKey
+            model_key: $modelKey,
+            brand_key: $brandKey,
         ) {
-            locationSold {
+            key
+            pricePurchase
+            priceSold
+            datePurchase
+            dateSold
+            code
+            size {
                 name
             }
             locationPurchase {
                 name
             }
-            code
-            priceSold
-            pricePurchase
-            dateSold
-            datePurchase
-            size {
+            locationSold {
                 name
             }
-            key
+            brand {
+                name
+            }
+            model {
+                name
+            }
         }
     }
 `;
